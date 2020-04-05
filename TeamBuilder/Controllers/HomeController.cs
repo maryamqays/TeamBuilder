@@ -20,6 +20,23 @@ namespace TeamBuilder.Controllers
             return View();
         }
 
+        public IActionResult About()
+        {
+            ViewData["name"] = "My name is saif";
+
+            return View();
+        }
+
+        public IActionResult Calculate(int a)
+        {
+            if (a>5) { ViewData["ViewSum"] = "A is large"; }
+
+            if (a<5) { ViewData["ViewSum"] = "A is small"; }
+          
+
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

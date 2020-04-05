@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using TeamBuilder.Models;
 
 namespace TeamBuilder.Data
 {
@@ -12,5 +13,6 @@ namespace TeamBuilder.Data
             : base(options)
         {
         }
+        public DbSet<TeamBuilder.Models.Country> Country { get; set; }
     }
 }
